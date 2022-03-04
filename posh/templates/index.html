@@ -1,0 +1,80 @@
+{% extends 'base.html'%}
+
+{% block title %}Air Company{% endblock %}
+
+{% block main %}
+    <div id="index">
+     <header class="site-header">
+          <div class="container">
+               <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+                   <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                       <svg class="bi me-2" width="40" height="32">
+                           <use xlink:href="#bootstrap"></use>
+                       </svg>
+                       <span class="fs-4">Air Company</span>
+                       
+                   </a>
+           
+                   <ul class="nav nav-pills">
+                       
+                       <li class="nav-item"><a href="/auth" class="nav-link active" aria-current="page">Sign In</a></li>   
+                   </ul>
+                   <!-- Default dropend button
+                    <div class="btn-group dropend">
+                         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                         Профиль
+                         </button>
+                         <ul class="dropdown-menu">
+                         <li class="nav-item"><a href="/history" class="nav-link active" aria-current="page">Истрия</a></li>
+                         <li class="nav-item"><a href="/..." class="nav-link active" aria-current="page">...</a></li>
+                         </ul>
+                    </div> -->
+                    <div class="container-xl">
+                        <div class="col card-header d-flex justify-content-between align-items-center">
+                            <h4>Авиа Рейсы</h4>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseHistoryId0" aria-expanded="false"
+                                aria-controls="collapseHistoryId0">
+                                Раскрыть
+                            </button>
+                        </div>
+                        <div class="col card-body">
+                            <div class="collapse" id="collapseHistoryId0">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Мосва - Самара</div>
+                                            <span class="fw-bold text-muted">Количество: 10</span>
+                                            <span class="fw-bold text-muted">Дата: 27.01.2022</span>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-end">
+                                            <a href="/auth" class="badge bg-primary fs-6 w-100 rounded-pill">1 ETH</a>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">{{ticket}}</div>
+                                            <span class="fw-bold text-muted">Количество: {{ticket}}</span>
+                                            <span class="fw-bold text-muted">Дата: 28.01.2022</span>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-end">
+                                            <a href="/auth" class="badge bg-primary fs-6 w-100 rounded-pill">1 ETH</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background">
+                        <img src="https://img5tv.cdnvideo.ru/webp/shared/files/201704/1_483394.jpg" />
+                    </div> 
+                    
+                    
+
+     </header>
+    </div>
+
+
+
+{% endblock %}

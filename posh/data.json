@@ -1,0 +1,412 @@
+{
+  "ip":"http://192.168.43.111:8545",
+
+
+    "address": "0xe40f25cF5bE2e0de5bbc0F60226c0B9f0aD6db02",
+    "abi": [
+        {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "stateMutability": "payable",
+            "type": "fallback"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_toaddr",
+                    "type": "address"
+                }
+            ],
+            "name": "AddNewManager",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "Email",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "Password",
+                    "type": "string"
+                }
+            ],
+            "name": "Auth",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "string[3]",
+                            "name": "FIO",
+                            "type": "string[3]"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "Email",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "Password",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "DataR",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "Balance",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "enum AirIntellengyCompony.Roles",
+                            "name": "Role",
+                            "type": "uint8"
+                        }
+                    ],
+                    "internalType": "struct AirIntellengyCompony.customer",
+                    "name": "",
+                    "type": "tuple"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "AviaReysS",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "NameCompany",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "StartCity",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "CityAppointment",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "Data",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "tiketPremiumClass",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "tiketFirstClass",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "tiketEconomyClass",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "Address",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "BuyTiket",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "address",
+                            "name": "Address",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "Price",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct AirIntellengyCompony.get[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256[]",
+                    "name": "_id",
+                    "type": "uint256[]"
+                }
+            ],
+            "name": "CheckPrice",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "res",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "Price",
+                    "type": "uint256"
+                }
+            ],
+            "name": "FullPrice",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string[3]",
+                    "name": "FIO",
+                    "type": "string[3]"
+                },
+                {
+                    "internalType": "string",
+                    "name": "Email",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "Password",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "DataR",
+                    "type": "string"
+                }
+            ],
+            "name": "Registr",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "ReturnTikets",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "id",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "NameCompany",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "StartCity",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "CityAppointment",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "Data",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "enum AirIntellengyCompony.Clases",
+                            "name": "Class",
+                            "type": "uint8"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "Price",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct AirIntellengyCompony.tiket[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "_Buy",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "id",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "NameCompany",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "StartCity",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "CityAppointment",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "Data",
+                    "type": "string"
+                },
+                {
+                    "internalType": "enum AirIntellengyCompony.Clases",
+                    "name": "Class",
+                    "type": "uint8"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "Price",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getBalance",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "tikets",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "id",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "NameCompany",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "StartCity",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "CityAppointment",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "Data",
+                    "type": "string"
+                },
+                {
+                    "internalType": "enum AirIntellengyCompony.Clases",
+                    "name": "Class",
+                    "type": "uint8"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "Price",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "stateMutability": "payable",
+            "type": "receive"
+        }
+    ]    
+}

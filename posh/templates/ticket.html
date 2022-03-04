@@ -1,0 +1,81 @@
+{% block title %}
+Корзина
+{% endblock %}
+
+{% block main %}
+<div id="order-message" class="alert alert-info">
+  <script id="order-message-template" type="text/template">
+    <% if (count !== 0) { %>
+        В Вашей корзине <%= count %> товара(ов) на общую сумму <%= summa %> рублей.
+        Заполните форму ниже и нажмите кнопку Отправить заказ.
+    <% } else { %>
+        Ваша корзина пуста. Перед отправкой заказа добавьте в корзину хотя бы один товар.
+    <% } %>
+  </script> 
+</div>
+<form id="order-form" class="form-horizontal" role="form">
+  <div class="form-group">
+      <label for="inputState" class="col-sm-2 control-label">Откуда</label>
+      <div class="col-sm-6">
+        <select id="inputState" class="form-control">
+          <option selected>Мосва</option>
+          <option>Самара</option>
+        </select>
+      </div> 
+  </div>
+  <div class="form-group">
+      <label for="inputState" class="col-sm-2 control-label">Куда</label>
+      <div class="col-sm-6">
+        <select id="inputState" class="form-control">
+          <option selected>Мосва</option>
+          <option>Самара</option>
+        </select>
+      </div> 
+  </div>  
+  <div class="form-group">
+      <label for="inputState" class="col-sm-2 control-label">Когда</label>
+      <div class="col-sm-6">
+        <select id="inputState" class="form-control">
+          <option selected>10.10.10</option>
+          <option>11.11.11</option>
+        </select>
+      </div> 
+  </div>
+
+  {% if ticket != None %}
+<ul class="list-group">
+    {% for ticket in tickets %}
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+            <div class="fw-bold">{{ ticket[1] }}</div>
+            <span class="fw-bold text-muted">Количество: {{ ticket[-1] }}</span>
+        </div>
+        <div class="d-flex flex-column align-items-end">
+            <span class="badge bg-primary fs-6 w-100 rounded-pill">{{ ticket[-2] }} ETH</span>
+            <div class="mt-2 d-flex">
+                <a class="btn btn-outline-success d-flex h-100 align-items-center me-1"
+                    href="/addticket/{{ ticket[0] }}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">    
+                    </svg></a>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 fs-5">
+            <strong>Итого:</strong> <span class="fw-bold text-muted">{{ totalsum }} ETH</span>
+        </div>
+    </li>
+</ul>
+
+
+
+  <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-6">
+          <button id="order-btn" type="submit" class="btn btn-primary">Отправить заказ</button>
+      </div>
+  </div>
+</form>
+
+
+{% endblock %}

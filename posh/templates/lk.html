@@ -1,0 +1,127 @@
+{% extends 'base.html'%}
+
+{% block title %} Profile {% endblock %}
+
+
+
+{% block main %}
+<div>
+    <div style="grid-gap: 50px;" class="between">
+        <h2 style="color: #1c1c1c;">ФИО: </h2>
+        <h2 style="color: #646464;">{{res[1][0]}} {{res[1][1]}} {{res[1][2]}}</h2>
+    </div>
+    <div style="grid-gap: 50px;" class="between">
+        <h2 style="color: #1c1c1c;">Email: </h2>
+        <h2 style="color: #646464;">{{res[2]}}</h2>
+    </div>
+    <div style="grid-gap: 50px;" class="between">
+        <h2 style="color: #1c1c1c;">Role: </h2>
+        <h2 style="color: #646464;">{{res[6]}}</h2>
+    </div>
+    <div style="grid-gap: 50px;" class="between">
+        <h2 style="color: #1c1c1c;">Ether: </h2>
+        <h2 style="color: #646464;">{{res[5]}}</h2>
+    </div>
+</div>
+<div class="row">
+        <div id="lk">
+            <header class="site-header">
+                <div class="container">
+                    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+                        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                            <svg class="bi me-2" width="40" height="32">
+                                <use xlink:href="#bootstrap"></use>
+                            </svg>
+                            
+                            <span class="fs-4">Air Company</span>
+                        </a>
+                        
+                        <!--Default dropend button 
+                        <div class="btn-group dropend">
+                                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Профиль
+                                </button>
+                                <ul class="dropdown-menu">
+                                <li class="nav-item"><a href="/history" class="nav-link active" aria-current="page">Истрия</a></li>
+                                <li class="nav-item"><a href="/trash" class="nav-link active" aria-current="page">...</a></li>
+                                </ul>
+                        </div>-->
+                        <div class="col-12 mb-4 col-md-8">
+                            <div class="row flex-column g-5">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title d-flex justify-content-between align-items-center">
+                                                <h2>История покупок</h2>
+                                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseHistory" aria-expanded="false" aria-controls="collapseHistory">
+                                                    Раскрыть
+                                                </button>
+                                            </div>
+                                            <div class="collapse pe-3" id="collapseHistory" style="max-height: 30rem; overflow-y: scroll;">
+                                                {% if history == None %}
+                                                <h4>История заказов отсутствует</h4>
+                                                {% else %}
+                                                <div class="d-flex card flex-column mb-2">
+                                                    <div class="col card-header d-flex justify-content-between align-items-center">
+                                                        <h4>Номер заказа 0</h4>
+                                                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#collapseHistoryId0" aria-expanded="false"
+                                                            aria-controls="collapseHistoryId0">
+                                                            Раскрыть
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        <div class="container-xl">
+                            <div class="col card-header d-flex justify-content-between align-items-center">
+                                <h4>Авиа Рейсы</h4>
+                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseHistoryId0" aria-expanded="false"
+                                    aria-controls="collapseHistoryId0">
+                                    Раскрыть
+                                </button>
+                            </div>
+                            <!--<div class="col card-body">
+                                <div class="collapse" id="collapseHistoryId0">
+                                    <ul class="list-group">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Мосва - Самара</div>
+                                                <span class="fw-bold text-muted">Количество: 10</span>
+                                                <span class="fw-bold text-muted">Дата: 27.01.2022</span>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-end">
+                                                <div id="0">
+                                                    <button href="/ticket" class="badge bg-primary fs-6 w-100 rounded-pill">1 ETH</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">{{ticket[1]}}</div>
+                                                <span class="fw-bold text-muted">Количество: {{ticket[2]}}</span>
+                                                <span class="fw-bold text-muted">Дата: {{ticket[3]}}</span>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-end">
+                                                <div id="1">
+                                                    <button href="/bay" class="badge bg-primary fs-6 w-100 rounded-pill">1 ETH</button>
+                                                </div>
+                                            </div>-->
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        
+
+            </header>
+        </div>
+    </div>
+{% endblock %}

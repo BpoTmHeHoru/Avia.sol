@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block main %}
+<div id="Regcontainer">
+    <form class="column-flex" method="post">
+        <div class="container-xxl">
+            <div class="mb-3">
+                <input tupe="text" placeholder="acc" name="acc" required>
+            </div>
+            <div class="mb-3">
+                <input tupe="key" placeholder="key" name="key" required>
+            </div>            
+            <div class="mb-3">
+                <input type="text" name="Email" required placeholder="Email">
+            </div>
+            <div class="mb-3">
+                <input type="text" name="fio" required placeholder="fio">
+            </div>
+            <div class="mb-3">
+                <input type="text" name="DataR" required placeholder="DataR">
+            </div>
+            <div class="mb-3">
+                <input type="password" name="Password" required placeholder="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up!</button>
+            <div class="dropdown-menu">
+        </div>
+    </form>
+</div>
+
+{% endblock %}
