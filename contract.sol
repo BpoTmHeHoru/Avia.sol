@@ -190,4 +190,4 @@ contract AirIntellengyCompony {
     {
         AviaReysS.push(AviaReys(NameCompany, StartCity, CityAppointment, Data, tiketPremiumClass, tiketFirstClass, tiketEconomyClass, amount));
     }
-}
+}                                           //front 3.14daras
